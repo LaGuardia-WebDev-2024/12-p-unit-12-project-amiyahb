@@ -21,34 +21,35 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Can You Guess All My Favorite Things??</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        🎥 What is my favorite romance movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">A Silent Voice</option>
+          <option value="movie2">10 Things I Hate About You</option>
+          <option value="movie3">How to Lose a Guy in 10 Days</option>
+          <option value="movie4">The Notebook</option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img class="moviePics" width="400">
     </div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        📖 My Favorite Artist?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="artist1">Frank Ocean</option>
+          <option value="artist2">Tyler The Creator</option>
+          <option value="artist3">SZA aka Solana</option>
+          <option value="artist4">Radiohead</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
@@ -66,11 +67,13 @@ Select ONE Additional Feature to Add
         var $answer = $("#movie-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
+        if (answer === "movie3") {
+          $("#movie-text").text("YESSSS, YESSSS, and YESSS AGAIN!");
+          $(".moviePics").attr("src", "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVDmXOWqrmtIL5J6RqKSr33VRPiD4kcT3TFK17g31oqYi0pJnRocoaab8U7gdEZ5mZcR92i_TicpzOi_pCed9TdsyQ0XALpbrT-7PzJtxw.jpg?r=0ec")
         } 
         else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").text("I LOVEEE but no");
+          $(".moviePics").attr("src", "https://freesvg.org/img/Sad-Face.png")
         }
       });
 

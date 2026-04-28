@@ -1,10 +1,17 @@
 #movie-result {
-  background: rgb(244, 98, 181);
+  background-color:rgb(248, 221, 235);
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+body {
+  background-image: url("https://i.pinimg.com/originals/43/92/30/43923068f79f5093e5571dc82970a7c3.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #book-result {
@@ -19,4 +26,8 @@
 hr {
   height: 5px;
   background-color: black;
+}
+
+.moviePics {
+  
 }
