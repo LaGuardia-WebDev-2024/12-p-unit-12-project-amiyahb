@@ -1,9 +1,9 @@
 <!-- Unit 12 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
+[ yes ] Two Interactive Drop-down Inputs 
 [  ] Standard Animation
 [  ] Custom Animation
-[  ] Include Three Images
+[ yes ] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -41,21 +41,40 @@ Select ONE Additional Feature to Add
       <img class="moviePics" width="400">
     </div>
     <hr />
-    <!-- Book Question -->
-    <form id="book-form">
+    <!-- Artist Question -->
+    <form id="artist-form">
       <label>
         📖 My Favorite Artist?
-        <select id="book-answer">
+        <select id="artist-answer">
           <option value="artist1">Frank Ocean</option>
           <option value="artist2">Tyler The Creator</option>
           <option value="artist3">SZA aka Solana</option>
-          <option value="artist4">Radiohead</option>
+          <option value="artist4">Cleo Sol</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Artist Answer</button>
     </form>
-    <div id="book-result">
-      <p id="book-text"></p>
+    <div id="artist-result">
+      <p id="artist-text"></p>
+      <img class="artistPics" width="400">
+    </div>
+    <hr />
+    <!--Social Media Question -->
+    <form id="media-form">
+      <label>
+        📖 What's My Fav Social Media App?
+        <select id="media-answer">
+          <option value="media1">SnapChat</option>
+          <option value="media2">Twitter / X</option>
+          <option value="media3">Tiktok</option>
+          <option value="media4">Instagram</option>
+        </select>
+      </label>
+      <button type="submit">Check Social Media Answer</button>
+    </form>
+    <div id="media-result">
+      <p id="media-text"></p>
+      <img class="mediaPics" width="400">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -68,30 +87,61 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "movie3") {
-          $("#movie-text").text("YESSSS, YESSSS, and YESSS AGAIN!");
-          $(".moviePics").attr("src", "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVDmXOWqrmtIL5J6RqKSr33VRPiD4kcT3TFK17g31oqYi0pJnRocoaab8U7gdEZ5mZcR92i_TicpzOi_pCed9TdsyQ0XALpbrT-7PzJtxw.jpg?r=0ec")
+          $("#movie-text").text("YESSSS, YESSSS, and YESSS AGAIN!").fadein(1500);
+          $(".moviePics").attr("src", "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVDmXOWqrmtIL5J6RqKSr33VRPiD4kcT3TFK17g31oqYi0pJnRocoaab8U7gdEZ5mZcR92i_TicpzOi_pCed9TdsyQ0XALpbrT-7PzJtxw.jpg?r=0ec").fadein(1500);
         } 
         else {
-          $("#movie-text").text("I LOVEEE but no");
+          $("#movie-text").text("I LOVEEE but no").fadein(1500);
           $(".moviePics").attr("src", "https://freesvg.org/img/Sad-Face.png")
         }
       });
 
       //=======================Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      $("#artist-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#artist-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+        if (answer === "artist3") {
+          $("#artist-text").text("YESSSS DATS MY QUEEN!");
+          $(".artistPics").attr("src", "https://www.billboard.com/wp-content/uploads/2026/02/P103YTVV-e1770055045142.jpg?w=942&h=628&crop=1")
+        } 
+       
+        if (answer === "artist1") {
+          $("#artist-text").text("I can't even lie dats my second fav!!");
+          $(".artistPics").attr("src", "https://freesvg.org/img/Sad-Face.png")
+        }
+
+        if (answer === "artist2") {
+          $("#artist-text").text("I can't even lie dats my second fav too DANG ITTT!!");
+          $(".artistPics").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwO0GZXSstRpqtfbarWEbZUoefWgV0Et03Q&s")
+        }
+
+        if (answer === "artist4") {
+          $("#artist-text").text("Love my spiritual queen DOWN, but no");
+          $(".artistPics").attr("src", "https://f4.bcbits.com/img/a4292441278_16.jpg")
+        }
+        
+      });
+
+      //=======================Social Media Question jQuery Code
+        $("#media-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#media-answer");
+        var answer = $answer.val();
+      
+      if (answer === "media4") {
+          $("#media-text").text("YESSSS YOU ALR KNOWW!");
+          $(".mediaPics").attr("src", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiyI9QUrk0Uern4dYrI_PC0wPIwKQbdT5ja_rvg8fwYZHipzAgY38ijCu2aZBxmQJXxC4sFVPcX4xVm95LWjtMpFsVqUOyAcL0tblqUY5Kja_sdn041Bw0jO83KXX2ozMx5m_Jobs0Ylw/s0/ig.jpg")
         } 
         else {
-          $("#book-text").text("Try Again!");
+          $("#media-text").text("Nah chat");
+          $(".mediaPics").attr("src", "https://freesvg.org/img/Sad-Face.png")
         }
       });
-      
+
     </script>
   </body>
 
