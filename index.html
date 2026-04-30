@@ -26,7 +26,7 @@ Select ONE Additional Feature to Add
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite romance movie?
+        🎥 What is my Favorite Romance Movie?
         <select id="movie-answer">
           <option value="movie1">A Silent Voice</option>
           <option value="movie2">10 Things I Hate About You</option>
@@ -76,6 +76,42 @@ Select ONE Additional Feature to Add
       <p id="media-text"></p>
       <img class="mediaPics" width="400">
     </div>
+    <hr />
+    <!--Comfort Anime Question -->
+    <form id="anime-form">
+      <label>
+        📖 What's My Favorite Comfort Anime(Hard Question tbh)?
+        <select id="anime-answer">
+          <option value="anime1">Hunter X Hunter</option>
+          <option value="anime2">Fruits Baskets</option>
+          <option value="anime3">Seven Deadly Sins</option>
+          <option value="anime4">Soul Eater</option>
+        </select>
+      </label>
+      <button type="submit">Check Comfort Anime Answer</button>
+    </form>
+    <div id="anime-result">
+      <p id="anime-text"></p>
+      <img class="animePics" width="400">
+    </div>
+     <hr />
+    <!--Carribean Food Question -->
+    <form id="food-form">
+      <label>
+        📖 What's My Fav Carribean Food App?
+        <select id="food-answer">
+          <option value="food1">Festival</option>
+          <option value="food2">Jerk Chicken</option>
+          <option value="food3">Sweet Plantain</option>
+          <option value="food4">ALL OF THE ABOVE</option>
+        </select>
+      </label>
+      <button type="submit">Check Carribean Food Answer</button>
+    </form>
+    <div id="food-result">
+      <p id="food-text"></p>
+      <img class="foodPics" width="400">
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       
@@ -87,12 +123,23 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "movie3") {
-          $("#movie-text").text("YESSSS, YESSSS, and YESSS AGAIN!").fadein(1500);
-          $(".moviePics").attr("src", "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVDmXOWqrmtIL5J6RqKSr33VRPiD4kcT3TFK17g31oqYi0pJnRocoaab8U7gdEZ5mZcR92i_TicpzOi_pCed9TdsyQ0XALpbrT-7PzJtxw.jpg?r=0ec").fadein(1500);
+          $("#movie-text").hide().text("YESSSS, YESSSS, and YESSS AGAIN!").slideToggle(). animate({
+            marginLeft: "200px"
+
+          }, 1000);
+          $(".moviePics").hide().attr("src", "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVDmXOWqrmtIL5J6RqKSr33VRPiD4kcT3TFK17g31oqYi0pJnRocoaab8U7gdEZ5mZcR92i_TicpzOi_pCed9TdsyQ0XALpbrT-7PzJtxw.jpg?r=0ec").slideToggle(). animate({
+            marginLeft: "150px"
+
+          }, 1000);
         } 
         else {
-          $("#movie-text").text("I LOVEEE but no").fadein(1500);
-          $(".moviePics").attr("src", "https://freesvg.org/img/Sad-Face.png")
+          $("#movie-text").hide().text("I LOVEEE but no").toggle(200). animate({
+            marginLeft: "200px"
+
+          }, 1000);
+          $(".moviePics").hide().attr("src", "https://freesvg.org/img/Sad-Face.png").toggle(200). animate({
+            marginLeft: "200px"
+          }, 1000)
         }
       });
 
@@ -104,23 +151,29 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "artist3") {
-          $("#artist-text").text("YESSSS DATS MY QUEEN!");
-          $(".artistPics").attr("src", "https://www.billboard.com/wp-content/uploads/2026/02/P103YTVV-e1770055045142.jpg?w=942&h=628&crop=1")
+          $("#artist-text").text("YESSSS DATS MY QUEEN!").fadeIn(1000).animate({
+            marginLeft: "200px"
+
+          }, 1000);
+          $(".artistPics").hide().attr("src", "https://www.billboard.com/wp-content/uploads/2026/02/P103YTVV-e1770055045142.jpg?w=942&h=628&crop=1").fadeIn(1000). animate({
+            marginLeft: "150px"
+
+          }, 1000)
         } 
        
         if (answer === "artist1") {
-          $("#artist-text").text("I can't even lie dats my second fav!!");
-          $(".artistPics").attr("src", "https://freesvg.org/img/Sad-Face.png")
+          $("#artist-text").hide().text("I can't even lie dats my second fav!!").slideDown(1000);
+          $(".artistPics").hide().attr("src", "https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg").slideDown(1000)
         }
 
         if (answer === "artist2") {
           $("#artist-text").text("I can't even lie dats my second fav too DANG ITTT!!");
-          $(".artistPics").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwO0GZXSstRpqtfbarWEbZUoefWgV0Et03Q&s")
+          $(".artistPics").hide().attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwO0GZXSstRpqtfbarWEbZUoefWgV0Et03Q&s").slideDown(1000)
         }
 
         if (answer === "artist4") {
-          $("#artist-text").text("Love my spiritual queen DOWN, but no");
-          $(".artistPics").attr("src", "https://f4.bcbits.com/img/a4292441278_16.jpg")
+          $("#artist-text").hide().text("Love my spiritual queen DOWN, but no").slideDown(1000);
+          $(".artistPics").hide().attr("src", "https://f4.bcbits.com/img/a4292441278_16.jpg").slideDown(1000)
         }
         
       });
@@ -133,12 +186,45 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
       
       if (answer === "media4") {
-          $("#media-text").text("YESSSS YOU ALR KNOWW!");
-          $(".mediaPics").attr("src", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiyI9QUrk0Uern4dYrI_PC0wPIwKQbdT5ja_rvg8fwYZHipzAgY38ijCu2aZBxmQJXxC4sFVPcX4xVm95LWjtMpFsVqUOyAcL0tblqUY5Kja_sdn041Bw0jO83KXX2ozMx5m_Jobs0Ylw/s0/ig.jpg")
+          $("#media-text").hide().text("YESSSS YOU ALR KNOWW!").fadeIn(1000).animate({
+            marginLeft: "200px"
+
+          }, 1000);
+          $(".mediaPics").hide().attr("src", "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiyI9QUrk0Uern4dYrI_PC0wPIwKQbdT5ja_rvg8fwYZHipzAgY38ijCu2aZBxmQJXxC4sFVPcX4xVm95LWjtMpFsVqUOyAcL0tblqUY5Kja_sdn041Bw0jO83KXX2ozMx5m_Jobs0Ylw/s0/ig.jpg").fadeIn(1000). animate({
+            marginLeft: "200px",
+            width: "500px"
+          }, 1000)
         } 
         else {
-          $("#media-text").text("Nah chat");
-          $(".mediaPics").attr("src", "https://freesvg.org/img/Sad-Face.png")
+          $("#media-text").hide().text("Nah chat").toggle(1000).animate({
+            marginLeft: "200px"
+
+          }, 1000);;
+          $(".mediaPics").attr("src", "https://freesvg.org/img/Sad-Face.png").toggle(1000)
+        }
+      });
+
+       //=======================Food Question jQuery Code
+      $("#food-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#food-answer");
+        var answer = $answer.val();
+
+        if (answer === "food4") {
+          $("#artist-text").text("YESSSS I CAN'T CHOOSE!").fadeIn(1000).animate({
+            marginLeft: "200px"
+
+          }, 1000);
+          $(".foodPics").hide().attr("src", "https://i0.wp.com/caribbeansydney.com.au/wp-content/uploads/2023/12/Sizzling-Caribbean-Street-Food.png?fit=1024%2C536&ssl=1").fadeIn(1000). animate({
+            marginLeft: "150px"
+
+          }, 1000)
+        } 
+       
+        else{
+          $("#food-text").hide().text("hmm...").slideDown(1000);
+          $(".foodPics").hide().attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc05ZM83udBJ_L4zRBCODCL2JfMZGiVD4uQg&s").slideDown(1000)
         }
       });
 
